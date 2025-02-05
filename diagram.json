@@ -1,0 +1,65 @@
+{
+    "version": 1,
+    "author": "Uri Shaked",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "wokwi-led",
+        "id": "led1",
+        "top": 25.2,
+        "left": -82.6,
+        "attrs": { "color": "blue" }
+      },
+      { "type": "wokwi-led", "id": "led2", "top": 73.2, "left": -82.6, "attrs": { "color": "red" } },
+      {
+        "type": "wokwi-led",
+        "id": "led3",
+        "top": 121.2,
+        "left": -82.6,
+        "attrs": { "color": "green" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 205.55,
+        "left": -67.2,
+        "attrs": { "value": "330" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r2",
+        "top": 234.35,
+        "left": -67.2,
+        "attrs": { "value": "330" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r3",
+        "top": 263.15,
+        "left": -67.2,
+        "attrs": { "value": "330" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn1",
+        "top": 44.6,
+        "left": -9.6,
+        "attrs": { "color": "black" }
+      },
+      { "type": "board-pi-pico-w", "id": "pico1", "top": 15.95, "left": 89.95, "attrs": {} }
+    ],
+    "connections": [
+      [ "led1:C", "r3:1", "green", [ "h-57.2", "v201.6" ] ],
+      [ "led2:C", "r2:1", "green", [ "h-57.2", "v124.8" ] ],
+      [ "led3:C", "r1:1", "green", [ "h-57.2", "v48" ] ],
+      [ "r3:2", "pico1:GND.4", "black", [ "h18", "v-76.8", "h86.4" ] ],
+      [ "led3:A", "pico1:GP13", "green", [ "v0" ] ],
+      [ "led1:A", "pico1:GP11", "green", [ "h38.4", "v96" ] ],
+      [ "btn1:1.r", "pico1:GND.1", "black", [ "h19.4", "v-9.6" ] ],
+      [ "btn1:2.r", "pico1:GP5", "green", [ "h19.4", "v9.8" ] ],
+      [ "led2:A", "pico1:GP12", "green", [ "h19.2", "v57.56" ] ],
+      [ "r2:2", "pico1:GND.4", "green", [ "h18", "v-48.04" ] ],
+      [ "r1:2", "pico1:GND.4", "green", [ "h18", "v-19.24" ] ]
+    ],
+    "dependencies": {}
+  }
