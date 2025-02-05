@@ -2,8 +2,6 @@
 
 Este repositório contém a implementação de um sistema de temporização utilizando a placa Raspberry Pi Pico W, programado em C com o Pico SDK. O sistema aciona três LEDs a partir do clique em um botão (pushbutton), desligando-os progressivamente a cada 3 segundos, utilizando a função `add_alarm_in_ms()`.
 
-!(imagens/diagram_temporizador.png)
-
 ## Requisitos
 Para executar este projeto, é necessário:
 
